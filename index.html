@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASBL Mon P'tit Refuge - Baby Care</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f0eb;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #ff8800;
+        }
+
+        .language-toggle {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Main Sections */
+        .section {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            gap: 40px;
+            margin: 20px 40px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .section-content {
+            flex: 1;
+        }
+
+        .section-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .section-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .learn-more {
+            color: #ff8800;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .learn-more:hover {
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #fff;
+            padding: 60px 40px;
+            margin: 20px 40px;
+            border-radius: 8px;
+        }
+
+        .about-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .about-intro {
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .team-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .team-members {
+            flex: 1;
+        }
+
+        .team-member {
+            margin-bottom: 20px;
+        }
+
+        .team-member-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .team-member-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .team-photo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .team-photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .quote-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            font-style: italic;
+            color: #333;
+            border-left: 4px solid #ff8800;
+        }
+
+        .quote-icon {
+            font-size: 48px;
+            color: #d4a5d4;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ff8800;
+            color: white;
+            padding: 40px;
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-left {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .footer-logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .footer-contact {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-contact p {
+            margin-bottom: 10px;
+        }
+
+        .footer-email {
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .footer-map {
+            width: 250px;
+        }
+
+        .footer-map img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .section {
+                flex-direction: column;
+                margin: 20px;
+                padding: 30px 20px;
+            }
+
+            .section-image {
+                text-align: center;
+            }
+
+            .team-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-left {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/60x60/ff8800/ffffff?text=Logo" alt="Logo">
+        </div>
+        <nav>
+            <a href="#about">À PROPOS DE NOUS</a>
+            <a href="#daycare">CRÈCHE</a>
+            <a href="#tutoring">SOUTIEN SCOLAIRE</a>
+            <a href="#orphanage">ORPHELINAT</a>
+            <a href="#signup">S'INSCRIRE</a>
+            <a href="#contact">CONTACT</a>
+            <span class="language-toggle">🌐 FR</span>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Section 1: Baby Care -->
+        <section class="section">
+            <div class="section-content">
+                <h1>Crèche Baby Care</h1>
+                <a href="#" class="learn-more">en savoir plus >></a>
+            </div>
+            <div class="section-image">
+                <img src="https://via.placeholder.com/300x200/ff8800/ffffff?text=Baby+Care" alt="Baby Care">
+            </div>
+        </section>
+
+        <!-- Section 2: Level Up -->
+        <section class="section">
+            <div class="section-content">
+                <h2>Level Up Soutien scolaire</h2>
+                <a href="#" class="learn-more">en savoir plus >></a>
+            </div>
+            <div class="section-image">
+                <img src="https://via.placeholder.com/300x200/ff8800/ffffff?text=Level+Up" alt="Level Up">
+            </div>
+        </section>
+
+        <!-- Section 3: Orphanage -->
+        <section class="section">
+            <div class="section-content">
+                <h2>Orphelinat Libateli</h2>
+                <a href="#" class="learn-more">en savoir plus >></a>
+            </div>
+            <div class="section-image">
+                <img src="https://via.placeholder.com/300x200/ff8800/ffffff?text=Orphelinat" alt="Orphelinat">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <h2 class="about-title">A propos de nous</h2>
+            
+            <div class="about-intro">
+                <p>
+                    <strong>L'ASBL Mon P'tit Refuge</strong> est une association sans but lucrative belge qui œuvre dans le secteur de la 
+                    petite enfance (de 0 à 3 ans) et dans la promotion des activités autour du développement 
+                    de l'enfant (3 à 12 ans).
+                </p>
+            </div>
+
+            <div class="about-intro">
+                <p>
+                    À la tête de cette ASBL, il y a 3 sœurs : Glody, Grâce et Jennifer qui croient profondément que chaque acte 
+                    d'amour donné à un enfant dès les premières heures de sa vie contribue à construire son avenir.
+                </p>
+            </div>
+
+            <div class="team-container">
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="team-member-name">Glody :</div>
+                        <div class="team-member-description">
+                            diplômée en assistante sociale, elle est actuellement directrice d'une crèche publique.
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-member-name">Grâce :</div>
+                        <div class="team-member-description">
+                            diplômée en sciences politiques, elle travaille actuellement dans le secteur public.
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="team-member-name">Jennifer :</div>
+                        <div class="team-member-description">
+                            diplômée en droit, elle travaille actuellement dans le secteur public.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-photo">
+                    <img src="https://via.placeholder.com/300x350/d4a5d4/ffffff?text=Team+Photo" alt="Team Members">
+                </div>
+            </div>
+
+            <div class="about-intro">
+                <p>
+                    Leurs expériences personnelles et professionnelles sont un véritable atout dans la réalisation des projets de 
+                    l'Asbl mon P'tit Refuge.
+                </p>
+            </div>
+
+            <div class="quote-section">
+                <div class="quote-icon">✿</div>
+                <p>
+                    Donne au jeune enfant de bonnes habitudes dès le début de sa carrière; 
+                    même avancé en âge, il ne s'en écartéra point.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="https://via.placeholder.com/60x60/ffffff/ff8800?text=Logo" alt="Logo">
+                <img src="https://via.placeholder.com/80x80/ffffff/ff8800?text=Baby+Care" alt="Baby Care Logo">
+                <img src="https://via.placeholder.com/80x80/ffffff/ff8800?text=Level+Up" alt="Level Up Logo">
+            </div>
+            <div class="footer-contact">
+                <p><strong>ASBL Mon P'tit Refuge</strong></p>
+                <p>BE 0635 972 579</p>
+                <p style="margin-top: 15px; font-size: 12px;">
+                    <a href="mailto:moncreche.levelup@gmail.com" style="color: white;">moncreche.levelup@gmail.com</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-map">
+            <img src="https://via.placeholder.com/250x150/ffffff/ff8800?text=Google+Map" alt="Location Map">
+        </div>
+    </footer>
+</body>
+</html>
