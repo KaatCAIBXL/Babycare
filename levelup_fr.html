@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cours privés de soutien scolaire et séminaires pour les parents avec Level Up.">
+    <title>Level Up Soutien scolaire | ASBL Mon P'tit Refuge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html" aria-label="Accueil Mon P'tit Refuge">
+            <img src="Afbeelding1.png" alt="Logo de l'ASBL Mon P'tit Refuge">
+        </a>
+        <nav aria-label="Navigation principale">
+            <a href="index.html#about">À PROPOS DE NOUS</a>
+            <a href="babycare_fr.html">CRÈCHE</a>
+            <a href="levelup_fr.html" aria-current="page">SOUTIEN SCOLAIRE</a>
+            <a href="maison_fr.html">MAISON DE QUARTIER</a>
+            <a href="index.html#signup">S'INSCRIRE</a>
+            <a href="index.html#contact">CONTACT</a>
+            <span class="language-toggle">🌐 FR</span>
+        </nav>
+    </header>
+
+    <main class="service-page">
+        <section class="service-hero" aria-labelledby="page-title">
+            <div>
+                <span class="service-eyebrow">Accompagnement scolaire</span>
+                <h1 id="page-title">Level Up Soutien scolaire</h1>
+                <p class="service-lead">Un accompagnement adapté aux élèves scolarisés dans l’enseignement néerlandophone et un soutien aux parents pour les aider à suivre la scolarité de leurs enfants.</p>
+            </div>
+            <img class="service-hero-image" src="levelup_studiebegeleiding.jpeg" alt="Accompagnement scolaire Level Up">
+        </section>
+
+        <div class="service-content">
+            <section class="service-card service-highlight">
+                <h2>Cours privés de soutien et de remédiation</h2>
+                <p>Nous organisons des cours privés de soutien et de remédiation scolaire, avec des professeurs expérimentés, pour les élèves qui sont scolarisés dans l’enseignement néerlandophone.</p>
+            </section>
+
+            <section class="service-card">
+                <h2>Séminaires pour les parents</h2>
+                <p>Nous organisons également des séminaires à l’attention des parents dont la langue maternelle n’est pas le néerlandais afin de les aider à mieux suivre et aider leurs enfants inscrits dans l’enseignement néerlandophone.</p>
+            </section>
+
+            <section class="service-card service-highlight">
+                <h2>Informations pratiques</h2>
+                <p><strong>Public :</strong> élèves de l’enseignement primaire et secondaire.</p>
+                <p><strong>Tarif :</strong> 20 € par heure.</p>
+                <p><strong>Adresse :</strong><br>
+                    Bruxellesbaan 140<br>
+                    1600 Sint-Pieters-Leeuw
+                </p>
+                <p><strong>Horaires :</strong></p>
+                <ul>
+                    <li>Mercredi : 14 h–15 h ou 15 h–16 h</li>
+                    <li>Vendredi : 16 h 30–17 h 30</li>
+                    <li>Samedi : 11 h–12 h ou 12 h–13 h</li>
+                </ul>
+                <p><strong>Contact :</strong> <a href="mailto:Monptitrefuge@gmail.com">Monptitrefuge@gmail.com</a></p>
+            </section>
+        </div>
+
+        <section class="service-gallery" aria-labelledby="gallery-title">
+            <div class="service-gallery-header">
+                <h2 id="gallery-title">Quelques moments en images</h2>
+                <div class="service-gallery-controls">
+                    <button class="gallery-control" type="button" data-direction="-1" aria-label="Photos précédentes">‹</button>
+                    <button class="gallery-control" type="button" data-direction="1" aria-label="Photos suivantes">›</button>
+                </div>
+            </div>
+            <div class="service-gallery-track" id="service-gallery-track" aria-label="Photos de soutien scolaire">
+                <img src="WhatsApp 2.jpeg" alt="Photo de soutien scolaire 1">
+                <img src="WhatsApp 3.jpeg" alt="Photo de soutien scolaire 2">
+                <img src="WhatsApp 4.jpeg" alt="Photo de soutien scolaire 3">
+                <img src="WhatsApp 5.jpeg" alt="Photo de soutien scolaire 4">
+                <img src="WhatsApp Image 2026-09-07 at 22.31.04.jpeg" alt="Photo de soutien scolaire 5">
+            </div>
+        </section>
+
+        <a class="service-back-link" href="index.html">← Retour à l’accueil</a>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="Afbeelding1.png" alt="Logo de l'ASBL Mon P'tit Refuge">
+            </div>
+            <div class="footer-contact">
+                <p><strong>ASBL Mon P'tit Refuge</strong></p>
+                <p>BE 0635 972 579</p>
+                <p><a href="mailto:Monptitrefuge@gmail.com" style="color: white;">Monptitrefuge@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-maps">
+            <div class="footer-map">
+                <h2>Soutien scolaire Level Up</h2>
+                <p>Bruxellesbaan 140, 1600 Sint-Pieters-Leeuw</p>
+                <iframe
+                    src="https://www.google.com/maps?q=Bruxellesbaan+140,+1600+Sint-Pieters-Leeuw&amp;output=embed&amp;hl=fr"
+                    title="Carte Google Maps du soutien scolaire Level Up : Bruxellesbaan 140, 1600 Sint-Pieters-Leeuw"
+                    allowfullscreen
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var galleryTrack = document.getElementById('service-gallery-track');
+        document.querySelectorAll('.gallery-control').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var image = galleryTrack.querySelector('img');
+                var gap = parseFloat(window.getComputedStyle(galleryTrack).columnGap) || 0;
+                var scrollDistance = image.getBoundingClientRect().width + gap;
+                galleryTrack.scrollBy({
+                    left: scrollDistance * Number(button.dataset.direction),
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
