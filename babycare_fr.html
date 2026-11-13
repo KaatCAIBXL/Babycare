@@ -17,7 +17,7 @@
             <a href="babycare_fr.html" aria-current="page">CRÈCHE</a>
             <a href="levelup_fr.html">SOUTIEN SCOLAIRE</a>
             <a href="maison_fr.html">MAISON DE QUARTIER</a>
-            <a href="index.html#signup">S'INSCRIRE</a>
+            <a href="inscription_fr.html">S'INSCRIRE</a>
             <a href="index.html#contact">CONTACT</a>
             <span class="language-toggle">🌐 FR</span>
         </nav>
@@ -70,6 +70,26 @@
             </section>
         </div>
 
+        <section class="service-gallery" aria-labelledby="gallery-title">
+            <div class="service-gallery-header">
+                <h2 id="gallery-title">Quelques moments en images</h2>
+                <div class="service-gallery-controls">
+                    <button class="gallery-control" type="button" data-direction="-1" aria-label="Photos précédentes">‹</button>
+                    <button class="gallery-control" type="button" data-direction="1" aria-label="Photos suivantes">›</button>
+                </div>
+            </div>
+            <div class="service-gallery-track" id="service-gallery-track" aria-label="Photos de la crèche Baby-CARE">
+                <img src="babycare1.jfif" alt="Photo de la crèche Baby-CARE 1">
+                <img src="babycare2.jfif" alt="Photo de la crèche Baby-CARE 2">
+                <img src="babycare3.jfif" alt="Photo de la crèche Baby-CARE 3">
+                <img src="babycare4.jfif" alt="Photo de la crèche Baby-CARE 4">
+                <img src="babycare5.jfif" alt="Photo de la crèche Baby-CARE 5">
+                <img src="babycare6.jpg" alt="Photo de la crèche Baby-CARE 6">
+                <img src="babycare7.jfif" alt="Photo de la crèche Baby-CARE 7">
+            </div>
+        </section>
+
+        <a class="signup-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfmUHJge3GSvScehpJJgGXqgUoajpXSnKRu8rYGboFOCDLwyw/viewform?usp=header">S'inscrire</a>
         <a class="service-back-link" href="index.html">← Retour à l’accueil</a>
     </main>
 
@@ -98,5 +118,19 @@
             </div>
         </div>
     </footer>
+    <script>
+        var galleryTrack = document.getElementById('service-gallery-track');
+        document.querySelectorAll('.gallery-control').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var image = galleryTrack.querySelector('img');
+                var gap = parseFloat(window.getComputedStyle(galleryTrack).columnGap) || 0;
+                var scrollDistance = image.getBoundingClientRect().width + gap;
+                galleryTrack.scrollBy({
+                    left: scrollDistance * Number(button.dataset.direction),
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

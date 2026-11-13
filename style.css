@@ -415,6 +415,56 @@
             border-top: 4px solid #ff8800;
         }
 
+        .signup-intro {
+            max-width: 760px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .signup-intro h1 {
+            margin-bottom: 12px;
+            color: #33251c;
+            font-size: clamp(32px, 4vw, 44px);
+            line-height: 1.15;
+        }
+
+        .signup-intro p,
+        .signup-options p {
+            color: #5e5148;
+            line-height: 1.8;
+        }
+
+        .signup-options .service-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .signup-options h2 {
+            margin-bottom: 12px;
+        }
+
+        .signup-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            border-radius: 6px;
+            background: #ff8800;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .signup-button:hover {
+            background: #d96f00;
+        }
+
+        .signup-button:focus-visible {
+            outline: 3px solid #33251c;
+            outline-offset: 3px;
+        }
+
         .service-gallery {
             margin-top: 28px;
             padding: 28px;
